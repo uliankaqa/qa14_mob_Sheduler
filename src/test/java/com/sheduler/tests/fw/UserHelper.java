@@ -16,8 +16,18 @@ public class UserHelper extends HelperBase{
         type(By.id("log_email_input"), user.getEmail());
         type(By.id("log_password_input"), user.getPassword());
         hideKeyboard();
+        waitForElement(By.id("login_btn"), 10);
         tap(By.id("login_btn"));
 
+    }
+
+    public void defaultLogin(){
+        login(new User().withEmail("ulia@gmail.com").withPassword("Ulia2021!"));
+    }
+
+    public void fillLoginForm(User user) {
+        waitForElementAndType(By.id("log_email_input"), 5,user.getEmail());
+        type(By.id("log_password_input"), user.getPassword());
     }
 
 }

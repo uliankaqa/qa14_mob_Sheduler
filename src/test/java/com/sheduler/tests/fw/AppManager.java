@@ -9,10 +9,11 @@ import java.net.URL;
 import java.util.concurrent.TimeUnit;
 
 public class AppManager {
-    AppiumDriver driver;
-    DesiredCapabilities capabilities;
+    private  AppiumDriver driver;
+    private  DesiredCapabilities capabilities;
 
     UserHelper user;
+    EventsHelper event;
 
     public void init() throws MalformedURLException {
         capabilities = new DesiredCapabilities();
@@ -28,10 +29,16 @@ public class AppManager {
        // driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 
         user = new UserHelper(driver);
+        event = new EventsHelper(driver);
+
     }
 
     public UserHelper user() {
         return user;
+    }
+
+    public EventsHelper event(){
+        return  event;
     }
 
     public void stop() {
