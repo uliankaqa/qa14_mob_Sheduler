@@ -1,14 +1,18 @@
-com/sheduler/tests/fw/UserHelper.java
- com.sheduler.tests.fw.UserHelper
 com/sheduler/tests/model/User.java
  com.sheduler.tests.model.User
+com/sheduler/tests/fw/UserHelper.java
+ com.sheduler.tests.fw.UserHelper
+com/sheduler/tests/tests/OpenAppTest.java
+ com.sheduler.tests.tests.OpenAppTest
+com/sheduler/tests/tests/EventCreationTests.java
+ com.sheduler.tests.tests.EventCreationTests
 com/sheduler/tests/fw/HelperBase.java
  com.sheduler.tests.fw.HelperBase
 com/sheduler/tests/fw/AppManager.java
  com.sheduler.tests.fw.AppManager
-com/sheduler/tests/tests/OpenAppTest.java
- com.sheduler.tests.tests.OpenAppTest
 com/sheduler/tests/tests/TestBase.java
  com.sheduler.tests.tests.TestBase
+com/sheduler/tests/fw/EventsHelper.java
+ com.sheduler.tests.fw.EventsHelper
 com/sheduler/tests/tests/LoginTests.java
  com.sheduler.tests.tests.LoginTests
