@@ -4,6 +4,8 @@ import com.sheduler.tests.model.User;
 import io.appium.java_client.AppiumDriver;
 import org.openqa.selenium.By;
 
+import java.util.Random;
+
 public class UserHelper extends HelperBase{
 
     public UserHelper(AppiumDriver driver){
@@ -28,6 +30,12 @@ public class UserHelper extends HelperBase{
     public void fillLoginForm(User user) {
         waitForElementAndType(By.id("log_email_input"), 5,user.getEmail());
         type(By.id("log_password_input"), user.getPassword());
+    }
+
+    public void register() {
+        Random random = new Random();
+        int r = random.nextInt(1000);
+        login(new User().withEmail("cd" + r + "@gmail.com").withPassword("Cdefj2021"));
     }
 
 }
