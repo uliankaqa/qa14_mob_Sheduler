@@ -79,4 +79,21 @@ public class HelperBase {
                 .perform();
 
     }
+
+    public void swipeUp() {
+
+        TouchAction action = new TouchAction(driver);
+        Dimension size = driver.manage().window().getSize();
+
+        int x = size.width / 2;
+
+        int startY = (int) (size.height * 0.8);
+        int stopY = (int) (size.height * 0.3);
+
+        action.longPress(PointOption.point(x,startY))
+                .moveTo(PointOption.point(x,stopY))
+                .release()
+                .perform();
+
+    }
 }
